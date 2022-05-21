@@ -15,7 +15,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         let scene = GameScene(size: CGSize(width:1536, height:2048))
-        // Load the SKScene from 'GameScene.sks'
         
         let skView = self.view as! SKView
         skView.showsFPS = false

@@ -19,16 +19,14 @@ class GameScene: SKScene {
     
     struct Info{
         static var score = 0
-        static var target = 1
-        static var value = Int.random(in: 1 ... 9)
-        static var sound = 1
+        static var target = 0
+        static var value = 0
     }
     
     public class CenterSpriteNode : SKSpriteNode{
         
         var value = 0
         var GScene:GameScene?
-        let label = SKLabelNode(fontNamed: "GillSans-Bold")
         var originalPosition = CGPoint(x:0, y:0)
         var outsideHexes: [TouchableSpriteNode] = []
         let border = UIBezierPath()
@@ -36,14 +34,8 @@ class GameScene: SKScene {
         var prevHex = "hex7"
         func st(c:CenterSpriteNode){
             self.originalPosition = self.position
-            label.text = String(value)
-            label.fontColor = UIColor(red: 34/255, green: 106/255, blue: 232/255, alpha: 1)
-            label.position = position
-            label.verticalAlignmentMode = .center
-            label.setScale(3)
-            label.isUserInteractionEnabled = false
-            label.zPosition = 4
-            GScene!.addChild(label)
+            let tempString = "hex-1-"+String(self.value)
+            self.texture = SKTexture(imageNamed: tempString)
         }
         
         func addHex(tempHex:TouchableSpriteNode){
@@ -110,26 +102,20 @@ class GameScene: SKScene {
                     if lock == 0{
                         self.position.x += amountDraggedX
                         self.position.y += amountDraggedY
-                        label.position.x += amountDraggedX
-                        label.position.y += amountDraggedY
                     }
                     else{
                         self.position.y = mousePos.y
                         self.position.x = mousePos.x
-                        label.position.y = mousePos.y
-                        label.position.x = mousePos.x
                     }
                 }
                 
                 if !border.contains(self.position){
                     lock = 1
-                    //self.texture = SKTexture(imageNamed: "hexagon-2")
                     let closestHex = findClosestHex(mousePos: self.position)
                     self.position.x = closestHex.position.x
                     self.position.y = closestHex.position.y
-                    self.label.position.x = closestHex.position.x
-                    self.label.position.y = closestHex.position.y
-                    self.label.zPosition = 1
+                    let tempString = "hex-1-0"
+                    self.texture = SKTexture(imageNamed: tempString)
                     closestHex.label.text = String(closestHex.value + value)
                     closestHex.setScale(1.1)
                     for hex in outsideHexes{
@@ -159,7 +145,8 @@ class GameScene: SKScene {
                     }
                 }
                 else{
-                    self.label.zPosition = 50
+                    let tempString = "hex-1-"+String(self.value)
+                    self.texture = SKTexture(imageNamed: tempString)
                     for hex in outsideHexes{
                         hex.setScale(1)
                         hex.label.text = String(hex.value)
@@ -178,8 +165,6 @@ class GameScene: SKScene {
                 }
             }
             self.position = self.originalPosition
-            self.label.position = self.originalPosition
-            self.label.zPosition = 5
             lock = 0
             prevHex = "hex7"
         }
@@ -202,16 +187,17 @@ class GameScene: SKScene {
         }
         
         func addToHex(){
-            if((value + CenterHex!.value) % Info.target == 0){
+            value += CenterHex!.value
+            let temp = CenterHex!.generateValue()
+            Info.value = temp
+            CenterHex!.value = temp
+            let tempString = "hex-1-"+String(CenterHex!.value)
+            CenterHex!.texture = SKTexture(imageNamed: tempString)
+
+            if(value % Info.target == 0){
                 if(Info.score > highScoreNumber){
                     highScoreNumber = Info.score
                     defaults.set(highScoreNumber, forKey: "highScoreSaved")
-                }
-                if sound == 1{
-                    //let systemSoundID: SystemSoundID = 1006
-                    //AudioServicesPlaySystemSound(systemSoundID)
-                    
-                    
                 }
                 let gameOver = GameOverScene(size:GScene!.size)
                 gameOver.scaleMode = GScene!.scaleMode
@@ -219,61 +205,14 @@ class GameScene: SKScene {
                 GScene!.view!.presentScene(gameOver, transition: transition)
             }
             else{
-                if sound == 1{
-                    //let systemSoundID: SystemSoundID = 1100
-                    //AudioServicesPlaySystemSound(systemSoundID)
-                    
-                }
                 Info.score += (CenterHex!.value*(10-Info.target))
                 if(Info.score > highScoreNumber){
                     highScoreNumber = Info.score
                     defaults.set(highScoreNumber, forKey: "highScoreSaved")
                 }
-                value += CenterHex!.value
-                let temp = CenterHex!.generateValue()
-                Info.value = temp
-                CenterHex!.value = temp
-                CenterHex!.label.text = String(CenterHex!.value)
-                label.text = String(value)
                 LabelScore!.text = "SCORE " + String(Info.score)
             }
-            
         }
-        /*
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            label.text = String(self.value + CenterHex!.value)
-            self.setScale(1.1)
-        }
-        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-            
-            label.text = String(self.value + CenterHex!.value)
-            self.setScale(1.1)
-            for touch: AnyObject in touches{
-                
-                let pointOfTouch = touch.location(in: self)
-                let dis = sqrt((pointOfTouch.x * pointOfTouch.x) + (pointOfTouch.y * pointOfTouch.y))
-                if dis > 130{
-                    label.text = String(self.value)
-                    self.setScale(1)
-                }
-            }
-            
-        }
-        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?){
-            
-            self.setScale(1)
-            
-            for touch: AnyObject in touches{
-                
-                let pointOfTouch = touch.location(in: self)
-                let dis = sqrt((pointOfTouch.x * pointOfTouch.x) + (pointOfTouch.y * pointOfTouch.y))
-                if dis < 130{
-                    addToHex()
-                }
-            }
-             
-        }
-        */
     }
     
     
@@ -302,7 +241,7 @@ class GameScene: SKScene {
         let hexHeight = hexSize/2 * sqrt(3)
                 
         
-        let hexCenter = CenterSpriteNode(imageNamed: "hexagon-1")
+        let hexCenter = CenterSpriteNode(imageNamed: "hex-1-0")
         hexCenter.name = "hexcenter"
         hexCenter.value = Info.value
         hexCenter.isUserInteractionEnabled = true
@@ -354,11 +293,6 @@ class GameScene: SKScene {
         generateOuterHexes(tempHex:hex5,n:4)
         generateOuterHexes(tempHex:hex6,n:5)
         
-        let temp = hexCenter.generateValue()
-        hexCenter.value = temp
-        Info.value = temp
-        hexCenter.label.text = String(temp)
-        
         let bestScoreLabel = SKLabelNode(fontNamed: "GillSans-SemiBold")
         bestScoreLabel.fontColor = UIColor.white
         
@@ -376,7 +310,7 @@ class GameScene: SKScene {
         labelT.position = CGPoint(x:self.size.width/3+110, y:self.size.height/2+300)
         labelT.verticalAlignmentMode = .center
         labelT.numberOfLines = 2
-        labelT.setScale(1.5)
+        labelT.fontSize = 50
         labelT.zPosition = 3
         self.addChild(labelT)
         
@@ -387,9 +321,10 @@ class GameScene: SKScene {
         labelT2.verticalAlignmentMode = .center
         labelT2.setScale(3)
         labelT2.zPosition = 3
-        self.addChild(labelT2)
+        //self.addChild(labelT2)
         
-        let targetHex = SKSpriteNode(imageNamed: "hexagon-1")
+        let tempString = "hex-1-" + String(Info.target)
+        let targetHex = SKSpriteNode(imageNamed: tempString)
         targetHex.name = "targetHex"
         targetHex.position = CGPoint(x:self.size.width/3*2, y:self.size.height/2+300)
         targetHex.zPosition = 2
