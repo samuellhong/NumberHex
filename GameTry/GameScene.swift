@@ -19,7 +19,7 @@ class GameScene: SKScene {
     
     struct Info{
         static var score = 0
-        static var target = 0
+        static var target = 1
         static var value = Int.random(in: 1 ... 9)
         static var sound = 1
     }
