@@ -139,33 +139,24 @@ class GameScene: SKScene {
                         }
                     }
                     if closestHex.name != prevHex{
+                        /*
                         if sound == 1{
-                            //let systemSoundID: SystemSoundID = 1105
-                            //AudioServicesPlaySystemSound(systemSoundID)
-                            guard let path = Bundle.main.path(forResource: "Tink", ofType: "mp3") else {
-                                    print("play")
-                                    return
-                                }
+                            var player: AVAudioPlayer?
+                            if let path = NSDataAsset(name: "Tink"){
                                 do {
-                                    try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
-
-                                    try AVAudioSession.sharedInstance().setActive(true)
-
-                                    //player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-                                    let url = URL(fileURLWithPath: path)
-                                    let player = try AVAudioPlayer(contentsOf: url)
-                                    player.play()
+                                    player = try AVAudioPlayer(data:path.data, fileTypeHint: "mp3")
+                                    player?.delegate = self as? AVAudioPlayerDelegate
+                                    player?.prepareToPlay()
+                                    player?.play()
 
                                 } catch let error {
                                     print(error.localizedDescription)
                                 }
-                             
+                            }
                         }
-                        
+                        */
                         prevHex = closestHex.name!
                     }
-                    
-                    
                 }
                 else{
                     self.label.zPosition = 50
@@ -469,7 +460,7 @@ class GameScene: SKScene {
         soundNode.position = CGPoint(x:self.size.width/3*2 - 50+(width1-height1)/2, y:self.size.height/2+950)
         soundNode.zPosition = 2
         soundNode.setScale(0.3)
-        self.addChild(soundNode)
+        //self.addChild(soundNode)
         hexCenter.moveBorder()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
