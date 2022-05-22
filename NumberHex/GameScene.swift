@@ -19,7 +19,8 @@ let resumeLabel = SKLabelNode(fontNamed: "GillSans-SemiBold")
 
 let howTo = SKShapeNode(rect: CGRect(x: 1536/2-200, y:2048/2+100-70, width: 400, height: 140), cornerRadius: 15)
 let howToLabel = SKLabelNode(fontNamed: "GillSans-SemiBold")
-
+let rulesPage = SKShapeNode(rect: CGRect(x:0,y:0,width:1536, height:2048))
+let rulesNotes = SKLabelNode(fontNamed: "GillSans-SemiBold")
 
 class GameScene: SKScene {
     
@@ -36,6 +37,7 @@ class GameScene: SKScene {
         var GScene:GameScene?
         var originalPosition = CGPoint(x:0, y:0)
         var outsideHexes: [TouchableSpriteNode] = []
+        var tLabel: SKLabelNode?
         let border = UIBezierPath()
         var lock = 0
         var prevHex = "hex7"
@@ -47,6 +49,9 @@ class GameScene: SKScene {
         
         func addHex(tempHex:TouchableSpriteNode){
             outsideHexes.append(tempHex)
+        }
+        func addtLabel(tLabel:SKLabelNode){
+            self.tLabel = tLabel
         }
         
         func moveBorder(){
@@ -169,6 +174,22 @@ class GameScene: SKScene {
                 hex.setScale(1)
                 if(dis < 5){
                     hex.addToHex()
+                    if Info.score >= 600 && Info.target < 10{
+                        Info.target = Int.random(in: 11 ... 19)
+                        tLabel!.text = String(Info.target)
+                    }
+                    else if Info.score >= 3046 && Info.target < 21{
+                        Info.target = Int.random(in: 21 ... 29)
+                        tLabel!.text = String(Info.target)
+                    }
+                    else if Info.score >= 16035 && Info.target < 31{
+                        Info.target = Int.random(in: 31 ... 39)
+                        tLabel!.text = String(Info.target)
+                    }
+                    else if Info.score >= 73135 && Info.target < 41{
+                        Info.target = Int.random(in: 41 ... 49)
+                        tLabel!.text = String(Info.target)
+                    }
                 }
             }
             self.position = self.originalPosition
@@ -197,22 +218,27 @@ class GameScene: SKScene {
             value += CenterHex!.value
             let temp = CenterHex!.generateValue()
             Info.value = temp
-            CenterHex!.value = temp
-            let tempString = "hex-1-"+String(CenterHex!.value)
-            CenterHex!.texture = SKTexture(imageNamed: tempString)
+            
+            if(Info.score > highScoreNumber){
+                highScoreNumber = Info.score
+                defaults.set(highScoreNumber, forKey: "highScoreSaved")
+            }
 
             if(value % Info.target == 0){
-                if(Info.score > highScoreNumber){
-                    highScoreNumber = Info.score
-                    defaults.set(highScoreNumber, forKey: "highScoreSaved")
-                }
+                CenterHex!.value = temp
+                let tempString = "hex-1-"+String(CenterHex!.value)
+                CenterHex!.texture = SKTexture(imageNamed: tempString)
                 let gameOver = GameOverScene(size:GScene!.size)
                 gameOver.scaleMode = GScene!.scaleMode
                 let transition = SKTransition.fade(withDuration: 0.75)
                 GScene!.view!.presentScene(gameOver, transition: transition)
             }
             else{
-                Info.score += (CenterHex!.value*(10-Info.target))
+                Info.score += CenterHex!.value
+                CenterHex!.value = temp
+                let tempString = "hex-1-"+String(CenterHex!.value)
+                CenterHex!.texture = SKTexture(imageNamed: tempString)
+                
                 if(Info.score > highScoreNumber){
                     highScoreNumber = Info.score
                     defaults.set(highScoreNumber, forKey: "highScoreSaved")
@@ -236,7 +262,7 @@ class GameScene: SKScene {
             hexCenter.addHex(tempHex:tempHex)
             self.addChild(tempHex)
         }
-        
+
         Info.target = Int.random(in: 3 ... 9)
         Info.value = Int.random(in: 1 ... 9)
         Info.score = 0
@@ -321,15 +347,16 @@ class GameScene: SKScene {
         self.addChild(labelT)
         
         let labelT2 = SKLabelNode(fontNamed: "GillSans-Bold")
+        hexCenter.addtLabel(tLabel: labelT2)
         labelT2.fontColor = UIColor(red: 34/255, green: 106/255, blue: 232/255, alpha: 1)
         labelT2.text = String(Info.target)
         labelT2.position = CGPoint(x:self.size.width/3*2, y:self.size.height/2+300)
         labelT2.verticalAlignmentMode = .center
         labelT2.setScale(3)
         labelT2.zPosition = 3
-        //self.addChild(labelT2)
+        self.addChild(labelT2)
         
-        let tempString = "hex-1-" + String(Info.target)
+        let tempString = "hex-1-0"
         let targetHex = SKSpriteNode(imageNamed: tempString)
         targetHex.name = "targetHex"
         targetHex.position = CGPoint(x:self.size.width/3*2, y:self.size.height/2+300)
@@ -386,7 +413,7 @@ class GameScene: SKScene {
         mainMenuNode.verticalAlignmentMode = .center
         mainMenuNode.name = "mainMenu"
         //self.addChild(mainMenuNode)
-        let homeNode = SKSpriteNode(imageNamed: "home-2")
+        let homeNode = SKSpriteNode(imageNamed: "menu")
         homeNode.name = "mainMenu"
         homeNode.position = CGPoint(x:self.size.width/3*2 - 50+(width1-height1)/2, y:self.size.height/2+800)
         homeNode.zPosition = 2
@@ -404,7 +431,7 @@ class GameScene: SKScene {
         //self.addChild(soundNode)
         hexCenter.moveBorder()
         
-        menuPopUp.fillColor = UIColor(red: 255/255, green: 247/255, blue: 228/255, alpha: 0.75)
+        menuPopUp.fillColor = UIColor(red: 255/255, green: 247/255, blue: 228/255, alpha: 0.9)
         resume.fillColor = UIColor(red: 34/255, green: 106/255, blue: 232/255, alpha: 1)
         howTo.fillColor = UIColor(red: 34/255, green: 106/255, blue: 232/255, alpha: 1)
         resumeLabel.position = CGPoint(x:self.size.width/2, y:self.size.height/2+350)
@@ -422,8 +449,20 @@ class GameScene: SKScene {
         howTo.name = "howto"
         howToLabel.name = "howto"
         howToLabel.fontSize = 65
-        howToLabel.text = "HOW TO"
-        
+        howToLabel.text = "RULES"
+        rulesPage.fillColor = UIColor(red: 255/255, green: 247/255, blue: 228/255, alpha: 0.9)
+        rulesNotes.zPosition = 54
+        let rulesText = "Slide the center hexagon\ninto another, adding\ntheir two numbers.\n\nTarget values increase\nwith higher scores."
+        rulesNotes.text = rulesText
+        rulesNotes.horizontalAlignmentMode = .center;
+        rulesNotes.verticalAlignmentMode = .center;
+        rulesNotes.numberOfLines = 6
+        rulesNotes.position = CGPoint(x:self.size.width/2, y:self.size.height/2)
+        rulesNotes.fontColor = SKColor.black
+        rulesNotes.fontSize = 65
+        rulesNotes.name = "rules"
+        rulesPage.zPosition = 53
+        rulesPage.name = "rules"
         
     }
     func showMenu(){
@@ -450,6 +489,7 @@ class GameScene: SKScene {
                 let newGame = GameScene(size:self.size)
                 newGame.scaleMode = self.scaleMode
                 let transition = SKTransition.fade(withDuration: 0.75)
+                
                 self.view!.presentScene(newGame, transition: transition)
             }
             if nodeITapped.name == "sound"{
@@ -470,6 +510,16 @@ class GameScene: SKScene {
             }
             if nodeITapped.name == "resume"{
                 removeMenu()
+            }
+            if nodeITapped.name == "howto"{
+                self.addChild(rulesPage)
+                self.addChild(rulesNotes)
+                removeMenu()
+            }
+            if nodeITapped.name == "rules"{
+                rulesPage.removeFromParent()
+                rulesNotes.removeFromParent()
+                showMenu()
             }
         }
     }
