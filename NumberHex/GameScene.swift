@@ -38,6 +38,7 @@ class GameScene: SKScene {
         var originalPosition = CGPoint(x:0, y:0)
         var outsideHexes: [TouchableSpriteNode] = []
         var tLabel: SKLabelNode?
+        var bestScore: SKLabelNode?
         let border = UIBezierPath()
         var lock = 0
         var prevHex = "hex7"
@@ -50,8 +51,9 @@ class GameScene: SKScene {
         func addHex(tempHex:TouchableSpriteNode){
             outsideHexes.append(tempHex)
         }
-        func addtLabel(tLabel:SKLabelNode){
+        func addtLabel(tLabel:SKLabelNode, bLabel:SKLabelNode){
             self.tLabel = tLabel
+            self.bestScore = bLabel
         }
         
         func moveBorder(){
@@ -174,6 +176,7 @@ class GameScene: SKScene {
                 hex.setScale(1)
                 if(dis < 5){
                     hex.addToHex()
+                    bestScore!.text = "BEST "+String(highScoreNumber)
                     if Info.score >= 600 && Info.target < 10{
                         Info.target = Int.random(in: 11 ... 19)
                         tLabel!.text = String(Info.target)
@@ -347,7 +350,7 @@ class GameScene: SKScene {
         self.addChild(labelT)
         
         let labelT2 = SKLabelNode(fontNamed: "GillSans-Bold")
-        hexCenter.addtLabel(tLabel: labelT2)
+        hexCenter.addtLabel(tLabel: labelT2, bLabel:bestScoreLabel)
         labelT2.fontColor = UIColor(red: 34/255, green: 106/255, blue: 232/255, alpha: 1)
         labelT2.text = String(Info.target)
         labelT2.position = CGPoint(x:self.size.width/3*2, y:self.size.height/2+300)

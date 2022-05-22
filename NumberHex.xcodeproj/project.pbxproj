@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		021C37A0283454A6009E86B3 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C379F283454A6009E86B3 /* GameOverScene.swift */; };
+		025DB76D283A10E800720B8C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025DB76C283A10E800720B8C /* StoreKit.framework */; };
 		02AE2FFD2839EB9F009A0BCA /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AE2FFC2839EB9F009A0BCA /* MainMenuScene.swift */; };
 		02E0E64E28332D8300043C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0E64D28332D8300043C21 /* AppDelegate.swift */; };
 		02E0E65028332D8400043C21 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 02E0E64F28332D8400043C21 /* GameScene.sks */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		021C379F283454A6009E86B3 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		025DB76C283A10E800720B8C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		02AE2FFC2839EB9F009A0BCA /* MainMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		02E0E64A28332D8300043C21 /* NumberHex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberHex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E0E64D28332D8300043C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025DB76D283A10E800720B8C /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		025DB76B283A10E800720B8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				025DB76C283A10E800720B8C /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		02E0E64128332D8300043C21 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +101,7 @@
 				02E0E66628332D8500043C21 /* NumberHexTests */,
 				02E0E67028332D8500043C21 /* NumberHexUITests */,
 				02E0E64B28332D8300043C21 /* Products */,
+				025DB76B283A10E800720B8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -468,7 +480,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-86366UU6S.com.samuelhong.GameTry";
 				PRODUCT_NAME = NumberHex;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -499,7 +511,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-86366UU6S.com.samuelhong.GameTry";
 				PRODUCT_NAME = NumberHex;
 				SWIFT_EMIT_LOC_STRINGS = YES;
