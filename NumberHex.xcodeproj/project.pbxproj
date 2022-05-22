@@ -44,7 +44,7 @@
 		021C379F283454A6009E86B3 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		021C37A12834593D009E86B3 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		024481152836C5C500F0B891 /* MainMenuPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPopUp.swift; sourceTree = "<group>"; };
-		02E0E64A28332D8300043C21 /* GameTry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameTry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02E0E64A28332D8300043C21 /* NumberHex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberHex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E0E64D28332D8300043C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02E0E64F28332D8400043C21 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		02E0E65128332D8400043C21 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -53,9 +53,9 @@
 		02E0E65828332D8400043C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02E0E65A28332D8500043C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02E0E65D28332D8500043C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		02E0E66328332D8500043C21 /* GameTryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameTryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02E0E66328332D8500043C21 /* NumberHexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberHexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E0E66728332D8500043C21 /* GameTryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTryTests.swift; sourceTree = "<group>"; };
-		02E0E66D28332D8500043C21 /* GameTryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameTryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02E0E66D28332D8500043C21 /* NumberHexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberHexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E0E67128332D8500043C21 /* GameTryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTryUITests.swift; sourceTree = "<group>"; };
 		02E0E67328332D8500043C21 /* GameTryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,9 +88,9 @@
 		02E0E64128332D8300043C21 = {
 			isa = PBXGroup;
 			children = (
-				02E0E64C28332D8300043C21 /* GameTry */,
-				02E0E66628332D8500043C21 /* GameTryTests */,
-				02E0E67028332D8500043C21 /* GameTryUITests */,
+				02E0E64C28332D8300043C21 /* NumberHex */,
+				02E0E66628332D8500043C21 /* NumberHexTests */,
+				02E0E67028332D8500043C21 /* NumberHexUITests */,
 				02E0E64B28332D8300043C21 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,14 +98,14 @@
 		02E0E64B28332D8300043C21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02E0E64A28332D8300043C21 /* GameTry.app */,
-				02E0E66328332D8500043C21 /* GameTryTests.xctest */,
-				02E0E66D28332D8500043C21 /* GameTryUITests.xctest */,
+				02E0E64A28332D8300043C21 /* NumberHex.app */,
+				02E0E66328332D8500043C21 /* NumberHexTests.xctest */,
+				02E0E66D28332D8500043C21 /* NumberHexUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		02E0E64C28332D8300043C21 /* GameTry */ = {
+		02E0E64C28332D8300043C21 /* NumberHex */ = {
 			isa = PBXGroup;
 			children = (
 				02E0E64D28332D8300043C21 /* AppDelegate.swift */,
@@ -120,32 +120,32 @@
 				02E0E65A28332D8500043C21 /* Assets.xcassets */,
 				02E0E65C28332D8500043C21 /* LaunchScreen.storyboard */,
 			);
-			path = GameTry;
+			path = NumberHex;
 			sourceTree = "<group>";
 		};
-		02E0E66628332D8500043C21 /* GameTryTests */ = {
+		02E0E66628332D8500043C21 /* NumberHexTests */ = {
 			isa = PBXGroup;
 			children = (
 				02E0E66728332D8500043C21 /* GameTryTests.swift */,
 			);
-			path = GameTryTests;
+			path = NumberHexTests;
 			sourceTree = "<group>";
 		};
-		02E0E67028332D8500043C21 /* GameTryUITests */ = {
+		02E0E67028332D8500043C21 /* NumberHexUITests */ = {
 			isa = PBXGroup;
 			children = (
 				02E0E67128332D8500043C21 /* GameTryUITests.swift */,
 				02E0E67328332D8500043C21 /* GameTryUITestsLaunchTests.swift */,
 			);
-			path = GameTryUITests;
+			path = NumberHexUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02E0E64928332D8300043C21 /* GameTry */ = {
+		02E0E64928332D8300043C21 /* NumberHex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02E0E67728332D8500043C21 /* Build configuration list for PBXNativeTarget "GameTry" */;
+			buildConfigurationList = 02E0E67728332D8500043C21 /* Build configuration list for PBXNativeTarget "NumberHex" */;
 			buildPhases = (
 				02E0E64628332D8300043C21 /* Sources */,
 				02E0E64728332D8300043C21 /* Frameworks */,
@@ -155,14 +155,14 @@
 			);
 			dependencies = (
 			);
-			name = GameTry;
+			name = NumberHex;
 			productName = GameTry;
-			productReference = 02E0E64A28332D8300043C21 /* GameTry.app */;
+			productReference = 02E0E64A28332D8300043C21 /* NumberHex.app */;
 			productType = "com.apple.product-type.application";
 		};
-		02E0E66228332D8500043C21 /* GameTryTests */ = {
+		02E0E66228332D8500043C21 /* NumberHexTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02E0E67A28332D8500043C21 /* Build configuration list for PBXNativeTarget "GameTryTests" */;
+			buildConfigurationList = 02E0E67A28332D8500043C21 /* Build configuration list for PBXNativeTarget "NumberHexTests" */;
 			buildPhases = (
 				02E0E65F28332D8500043C21 /* Sources */,
 				02E0E66028332D8500043C21 /* Frameworks */,
@@ -173,14 +173,14 @@
 			dependencies = (
 				02E0E66528332D8500043C21 /* PBXTargetDependency */,
 			);
-			name = GameTryTests;
+			name = NumberHexTests;
 			productName = GameTryTests;
-			productReference = 02E0E66328332D8500043C21 /* GameTryTests.xctest */;
+			productReference = 02E0E66328332D8500043C21 /* NumberHexTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		02E0E66C28332D8500043C21 /* GameTryUITests */ = {
+		02E0E66C28332D8500043C21 /* NumberHexUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02E0E67D28332D8500043C21 /* Build configuration list for PBXNativeTarget "GameTryUITests" */;
+			buildConfigurationList = 02E0E67D28332D8500043C21 /* Build configuration list for PBXNativeTarget "NumberHexUITests" */;
 			buildPhases = (
 				02E0E66928332D8500043C21 /* Sources */,
 				02E0E66A28332D8500043C21 /* Frameworks */,
@@ -191,9 +191,9 @@
 			dependencies = (
 				02E0E66F28332D8500043C21 /* PBXTargetDependency */,
 			);
-			name = GameTryUITests;
+			name = NumberHexUITests;
 			productName = GameTryUITests;
-			productReference = 02E0E66D28332D8500043C21 /* GameTryUITests.xctest */;
+			productReference = 02E0E66D28332D8500043C21 /* NumberHexUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -232,9 +232,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02E0E64928332D8300043C21 /* GameTry */,
-				02E0E66228332D8500043C21 /* GameTryTests */,
-				02E0E66C28332D8500043C21 /* GameTryUITests */,
+				02E0E64928332D8300043C21 /* NumberHex */,
+				02E0E66228332D8500043C21 /* NumberHexTests */,
+				02E0E66C28332D8500043C21 /* NumberHexUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,12 +304,12 @@
 /* Begin PBXTargetDependency section */
 		02E0E66528332D8500043C21 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02E0E64928332D8300043C21 /* GameTry */;
+			target = 02E0E64928332D8300043C21 /* NumberHex */;
 			targetProxy = 02E0E66428332D8500043C21 /* PBXContainerItemProxy */;
 		};
 		02E0E66F28332D8500043C21 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02E0E64928332D8300043C21 /* GameTry */;
+			target = 02E0E64928332D8300043C21 /* NumberHex */;
 			targetProxy = 02E0E66E28332D8500043C21 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -467,14 +467,14 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-86366UU6S.com.samuelhong.GameTry";
-				PRODUCT_NAME = GameTry;
+				PRODUCT_NAME = NumberHex;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -498,14 +498,14 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-86366UU6S.com.samuelhong.GameTry";
-				PRODUCT_NAME = GameTry;
+				PRODUCT_NAME = NumberHex;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -528,7 +528,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameTry.app/GameTry";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NumberHex.app/NumberHex";
 			};
 			name = Debug;
 		};
@@ -548,7 +548,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameTry.app/GameTry";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NumberHex.app/NumberHex";
 			};
 			name = Release;
 		};
@@ -600,7 +600,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02E0E67728332D8500043C21 /* Build configuration list for PBXNativeTarget "GameTry" */ = {
+		02E0E67728332D8500043C21 /* Build configuration list for PBXNativeTarget "NumberHex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02E0E67828332D8500043C21 /* Debug */,
@@ -609,7 +609,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02E0E67A28332D8500043C21 /* Build configuration list for PBXNativeTarget "GameTryTests" */ = {
+		02E0E67A28332D8500043C21 /* Build configuration list for PBXNativeTarget "NumberHexTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02E0E67B28332D8500043C21 /* Debug */,
@@ -618,7 +618,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02E0E67D28332D8500043C21 /* Build configuration list for PBXNativeTarget "GameTryUITests" */ = {
+		02E0E67D28332D8500043C21 /* Build configuration list for PBXNativeTarget "NumberHexUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02E0E67E28332D8500043C21 /* Debug */,
