@@ -13,6 +13,13 @@ import AVFoundation
 let defaults = UserDefaults()
 var highScoreNumber = defaults.integer(forKey: "highScoreSaved")
 var sound = defaults.integer(forKey: "sound")
+let menuPopUp = SKShapeNode(rect: CGRect(x:0,y:0,width:1536, height:2048))
+let resume = SKShapeNode(rect: CGRect(x: 1536/2-200, y:2048/2+375-70, width: 400, height: 140), cornerRadius: 15)
+let resumeLabel = SKLabelNode(fontNamed: "GillSans-SemiBold")
+
+let howTo = SKShapeNode(rect: CGRect(x: 1536/2-200, y:2048/2+100-70, width: 400, height: 140), cornerRadius: 15)
+let howToLabel = SKLabelNode(fontNamed: "GillSans-SemiBold")
+
 
 class GameScene: SKScene {
     
@@ -215,7 +222,6 @@ class GameScene: SKScene {
         }
     }
     
-    
     override func didMove(to view: SKView) {
         
         func generateOuterHexes(tempHex: TouchableSpriteNode, n: Int){
@@ -397,6 +403,42 @@ class GameScene: SKScene {
         soundNode.setScale(0.3)
         //self.addChild(soundNode)
         hexCenter.moveBorder()
+        
+        menuPopUp.fillColor = UIColor(red: 255/255, green: 247/255, blue: 228/255, alpha: 0.75)
+        resume.fillColor = UIColor(red: 34/255, green: 106/255, blue: 232/255, alpha: 1)
+        howTo.fillColor = UIColor(red: 34/255, green: 106/255, blue: 232/255, alpha: 1)
+        resumeLabel.position = CGPoint(x:self.size.width/2, y:self.size.height/2+350)
+        howToLabel.position = CGPoint(x:self.size.width/2, y:self.size.height/2+75)
+        menuPopUp.zPosition = 50
+        resume.zPosition = 51
+        resumeLabel.zPosition = 52
+        howToLabel.zPosition = 52
+        resume.name = "resume"
+        resumeLabel.name = "resume"
+        resumeLabel.text = "RESUME"
+        resumeLabel.fontSize = 65
+        resumeLabel.horizontalAlignmentMode = .center
+        howTo.zPosition = 51
+        howTo.name = "howto"
+        howToLabel.name = "howto"
+        howToLabel.fontSize = 65
+        howToLabel.text = "HOW TO"
+        
+        
+    }
+    func showMenu(){
+        self.addChild(menuPopUp)
+        self.addChild(resume)
+        self.addChild(resumeLabel)
+        self.addChild(howTo)
+        self.addChild(howToLabel)
+    }
+    func removeMenu(){
+        menuPopUp.removeFromParent()
+        resume.removeFromParent()
+        resumeLabel.removeFromParent()
+        howTo.removeFromParent()
+        howToLabel.removeFromParent()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch: AnyObject in touches{
@@ -424,11 +466,10 @@ class GameScene: SKScene {
                 }
             }
             if nodeITapped.name == "mainMenu" || nodeITapped.name == "mainMenuNodeBox"{
-                let mainMenu = MainMenuScene(size:self.size)
-                mainMenu.scaleMode = self.scaleMode
-                let transition = SKTransition.fade(withDuration: 0.75)
-                self.view!.presentScene(mainMenu, transition: transition)
-                
+                showMenu()
+            }
+            if nodeITapped.name == "resume"{
+                removeMenu()
             }
         }
     }

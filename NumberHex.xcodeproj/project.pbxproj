@@ -114,11 +114,11 @@
 				02E0E65528332D8400043C21 /* GameViewController.swift */,
 				02E0E65328332D8400043C21 /* GameScene.swift */,
 				021C37A12834593D009E86B3 /* MainMenuScene.swift */,
+				024481152836C5C500F0B891 /* MainMenuPopUp.swift */,
 				021C379F283454A6009E86B3 /* GameOverScene.swift */,
 				02E0E65728332D8400043C21 /* Main.storyboard */,
 				02E0E65A28332D8500043C21 /* Assets.xcassets */,
 				02E0E65C28332D8500043C21 /* LaunchScreen.storyboard */,
-				024481152836C5C500F0B891 /* MainMenuPopUp.swift */,
 			);
 			path = GameTry;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 02E0E64528332D8300043C21 /* Build configuration list for PBXProject "GameTry" */;
+			buildConfigurationList = 02E0E64528332D8300043C21 /* Build configuration list for PBXProject "NumberHex" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -591,7 +591,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02E0E64528332D8300043C21 /* Build configuration list for PBXProject "GameTry" */ = {
+		02E0E64528332D8300043C21 /* Build configuration list for PBXProject "NumberHex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02E0E67528332D8500043C21 /* Debug */,

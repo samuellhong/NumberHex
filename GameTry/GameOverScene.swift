@@ -50,7 +50,6 @@ class GameOverScene: SKScene{
         self.addChild(mainMenuLabel)
         
         let width1 = Double(250)
-        //let height1 = Double(140)
         
         let refreshNodeBox = SKShapeNode(rect: CGRect(x: self.size.width/3*2-width1/2-50.0, y: self.size.height/2-500-width1/2, width: width1, height: width1), cornerRadius: 15)
         refreshNodeBox.zPosition = 2
@@ -61,11 +60,8 @@ class GameOverScene: SKScene{
         let newGameLabel = SKSpriteNode(imageNamed: "refresh")
         //newGameLabel.fontColor = UIColor.white
         newGameLabel.position = CGPoint(x:self.size.width/3*2-50.0, y:self.size.height/2-500.0)
-        //newGameLabel.verticalAlignmentMode = .center
-        //newGameLabel.horizontalAlignmentMode = .center
         newGameLabel.setScale(0.7)
         newGameLabel.zPosition = 3
-        //newGameLabel.text = "NEW"
         newGameLabel.name = "refresh"
         self.addChild(newGameLabel)
         
@@ -74,7 +70,6 @@ class GameOverScene: SKScene{
         mainMenuNodeBox.fillColor = UIColor(red: 34/255, green: 106/255, blue: 232/255, alpha: 1)
         mainMenuNodeBox.name = "mainMenuNodeBox"
         self.addChild(mainMenuNodeBox)
-        
 
     }
     

@@ -14,7 +14,6 @@ class MainMenuPopUp : UIView{
     let popupTitle = UILabel(frame: CGRect.zero)
     let popupText = UILabel(frame: CGRect.zero)
     let popupButton = UIButton(frame: CGRect.zero)
-        
     let BorderWidth: CGFloat = 2.0
     
     init(){
