@@ -3,4 +3,242 @@
    uuid = "96F9461B-FB4E-4930-A420-2EDE3B26B3C9"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9372719C-9DF9-498D-B8B4-13CB39F154F1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberHex/GameScene2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "showMenu(GScene:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD85638F-4276-485B-B533-2985E46E2FCD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberHex/GameScene2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "removeMenu()"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0538FC06-49D0-47C2-81C6-6F0F6BCDB5C5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberHex/GameScene2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "generateScene(GScene:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C26B8A0A-512E-4BFA-9E7E-150829DA5C05"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberHex/GameScene2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "generateTargetLabel(GScene:t:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664"
+            shouldBeEnabled = "No"
+            nameForDebugger = "Start"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberHex/GameScene2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "GameScene2"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - f9fcfa9a4f471c8b"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NumberHex.GameScene2.__allocating_init(size: __C.CGSize) -&gt; NumberHex.GameScene2"
+                  moduleName = "NumberHex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 5faa9e638344cc3a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NumberHex.GameScene2.init(size: __C.CGSize) -&gt; NumberHex.GameScene2"
+                  moduleName = "NumberHex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 154203f782fe7fff"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NumberHex.GameScene2.__allocating_init() -&gt; NumberHex.GameScene2"
+                  moduleName = "NumberHex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "7">
+               </Location>
+               <Location
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 441f11301f0c8761"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NumberHex.GameScene2.init() -&gt; NumberHex.GameScene2"
+                  moduleName = "NumberHex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 7e65094292e129a8"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NumberHex.GameScene2.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NumberHex.GameScene2&gt;"
+                  moduleName = "NumberHex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 42c09b5d0f7d1f22"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NumberHex.GameScene2.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NumberHex.GameScene2&gt;"
+                  moduleName = "NumberHex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 74d966b90cb3deda"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NumberHex.GameScene2.__deallocating_deinit"
+                  moduleName = "NumberHex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C94C7D8-1F6F-4DB8-95FD-CD3EDE358A68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberHex/GameScene2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "didMove(to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43C502AE-CC2A-4CF2-B623-E94B30D50195"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberHex/GameScene2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
+            landmarkName = "touchesBegan(_:with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BF9E4A8-C1F6-4E99-80B6-496311DB5EA4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NumberHex/GameScene2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "generateMenu(GScene:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
