@@ -85,104 +85,104 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - f9fcfa9a4f471c8b"
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 4bfd0d5287e052d9"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NumberHex.GameScene2.__allocating_init(size: __C.CGSize) -&gt; NumberHex.GameScene2"
                   moduleName = "NumberHex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  urlString = "file:///Users/samuelhong/Desktop/projects/NumberHex/NumberHex/NumberHex/GameScene2.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "21">
+                  offsetFromSymbolStart = "24">
                </Location>
                <Location
-                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 5faa9e638344cc3a"
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - edab69ab4be38e68"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NumberHex.GameScene2.init(size: __C.CGSize) -&gt; NumberHex.GameScene2"
                   moduleName = "NumberHex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  urlString = "file:///Users/samuelhong/Desktop/projects/NumberHex/NumberHex/NumberHex/GameScene2.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "201"
                   endingLineNumber = "201"
-                  offsetFromSymbolStart = "126">
+                  offsetFromSymbolStart = "132">
                </Location>
                <Location
-                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 154203f782fe7fff"
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - a743f43f4a5931ad"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NumberHex.GameScene2.__allocating_init() -&gt; NumberHex.GameScene2"
                   moduleName = "NumberHex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  urlString = "file:///Users/samuelhong/Desktop/projects/NumberHex/NumberHex/NumberHex/GameScene2.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "7">
+                  offsetFromSymbolStart = "12">
                </Location>
                <Location
-                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 441f11301f0c8761"
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - f61ee6f8d7abc533"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NumberHex.GameScene2.init() -&gt; NumberHex.GameScene2"
                   moduleName = "NumberHex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  urlString = "file:///Users/samuelhong/Desktop/projects/NumberHex/NumberHex/NumberHex/GameScene2.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "201"
                   endingLineNumber = "201"
-                  offsetFromSymbolStart = "89">
+                  offsetFromSymbolStart = "84">
                </Location>
                <Location
-                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 7e65094292e129a8"
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - cc64fe8a5a4667fa"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NumberHex.GameScene2.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NumberHex.GameScene2&gt;"
                   moduleName = "NumberHex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  urlString = "file:///Users/samuelhong/Desktop/projects/NumberHex/NumberHex/NumberHex/GameScene2.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "23">
+                  offsetFromSymbolStart = "20">
                </Location>
                <Location
-                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 42c09b5d0f7d1f22"
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - f0c16c95c7da5d70"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NumberHex.GameScene2.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NumberHex.GameScene2&gt;"
                   moduleName = "NumberHex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  urlString = "file:///Users/samuelhong/Desktop/projects/NumberHex/NumberHex/NumberHex/GameScene2.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "201"
                   endingLineNumber = "201"
-                  offsetFromSymbolStart = "176">
+                  offsetFromSymbolStart = "152">
                </Location>
                <Location
-                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - 74d966b90cb3deda"
+                  uuid = "5CD6EA0B-6A6E-4DDF-A396-D9D875BFE664 - c6d89171c4149088"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "NumberHex.GameScene2.__deallocating_deinit"
                   moduleName = "NumberHex"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/samuelhong/Desktop/samGame/GameTry/NumberHex/GameScene2.swift"
+                  urlString = "file:///Users/samuelhong/Desktop/projects/NumberHex/NumberHex/NumberHex/GameScene2.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
