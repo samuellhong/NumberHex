@@ -6,9 +6,8 @@
 //
 
 import Foundation
-
+//test2
 let hexesPerRow = [1,6,12]
-//AS
 class gameInfo{
     
     var dimensionality:Int = 1
